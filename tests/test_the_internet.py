@@ -60,6 +60,21 @@ from selenium.webdriver.common.by import By
 #     time.sleep(10)
 #     driver.quit()
 
+
+
+
+# Feature: Login Functionality
+#   As a user
+#   I want to log in to the secure area
+#   So that I can access protected content
+
+#   Scenario: Successful login with valid credentials
+#     Given I am on the login page
+#     When I enter username "tomsmith"
+#     And I enter password "SuperSecretPassword!"
+#     And I click the login button
+#     Then I should see the message "You logged into a secure area!"
+
 def test_login_correct():
     options = webdriver.ChromeOptions()
     options.binary_location = "/var/lib/flatpak/app/com.brave.Browser/current/active/export/bin/com.brave.Browser"
@@ -83,6 +98,13 @@ def test_login_correct():
     import time
     time.sleep(10)
     driver.quit()
+
+#   Scenario: Failed login with invalid password
+#     Given I am on the login page
+#     When I enter username "tomsmith"
+#     And I enter password "sahdsahdsah"
+#     And I click the login button
+#     Then I should see the message "Your password is invalid!"
 
 def test_login_incorrect():
     options = webdriver.ChromeOptions()
